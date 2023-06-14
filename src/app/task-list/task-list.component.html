@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row-main">
+      <div class="col-main">
+          <div class="row" style="margin-left: 2px; margin-bottom: 10px;">
+              <div class="col-md-2 filter-item" >
+                  <button class="btn btn-success add-button" (click)="onClickNewTask()">
+                      Add
+                  </button>
+              </div>
+              <div class="col-md-2 filter-item" >
+                <div class="form-check form-check-inline filter-item">
+                    <input class="form-check-input" type="radio" name="filter" id="all" value="All" [(ngModel)]="selectedFilter" (change)="changeFilter()">
+                    <label class="form-label" for="all" >
+                    All
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 filter-item">
+                <div class="form-check form-check-inline filter-item" >
+                    <input class="form-check-input" type="radio" name="filter" id="incomplete" value="Incomplete" [(ngModel)]="selectedFilter" (change)="changeFilter()">
+                    <label class="form-label" for="incomplete">
+                    Incomplete
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-2 filter-item">
+                <div class="form-check form-check-inline filter-item" >
+                    <input class="form-check-input" type="radio" name="filter" id="complete" value="Complete" [(ngModel)]="selectedFilter" (change)="changeFilter()">
+                    <label class="form-label" for="complete">
+                    Complete
+                    </label>
+                </div>
+            </div>
+          </div>
+          <div class="row-table">
+              <div class="col-table table-responsive-md">
+                  <table class="table">
+                      <thead>
+                          <th>Title</th>
+                          <th>Status</th>
+                          <th></th>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let task of taskList; let i = index"  >
+                              <td>{{ task.title }}</td>                              
+                              <td>{{ task.status }}</td>
+                              <td>
+                                  <a [routerLink]="['/edittask/', task.id]" class="nav-link">Edit</a>
+                                  <a (click)="deleteTask(i)" style="cursor: pointer;">Delete</a>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+            </div>
+      </div>
+    </div>
+</div>

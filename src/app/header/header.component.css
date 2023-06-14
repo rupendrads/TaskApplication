@@ -1,0 +1,17 @@
+.app-title {
+    color: dodgerblue;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    width: 100vw;
+    height: 55px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: height 0.5s ease;
+    z-index: 0;
+  }

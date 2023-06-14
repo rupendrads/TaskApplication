@@ -1,0 +1,29 @@
+.fa-pen-nib {
+    color: #6abd79;
+  }
+  
+  .fa-trash {
+    color: rgb(155, 8, 8);
+  }
+
+  a {
+    display:inline;
+    align-items: center;
+    margin: 4px 4px;
+    padding: 5px 5px;
+  }
+
+.add-button {
+  margin-top: 0px;
+}
+
+input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+}

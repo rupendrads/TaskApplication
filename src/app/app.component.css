@@ -1,0 +1,12 @@
+.with-header {
+    margin-top: 0rem;
+    margin-bottom: 40px;
+}
+  
+.register {
+    position: absolute;
+    width: 100%;
+    top: 75px;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
